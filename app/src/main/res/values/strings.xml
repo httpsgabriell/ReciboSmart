@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ReciboSmart</string>
+    <string name="txt_curso_ano">Licenciatura em Eng. Informática - DAM - 2026/27</string>
+    <string name="txt_aluno1">26401 - Gabriel Carvalho</string>
+    <string name="txt_aluno2">25971 - Gonçalo Silva</string>
+    <string name="txt_bibliotecas">Bibliotecas: (A preencher mais tarde)</string>
+</resources>

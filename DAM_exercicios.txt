@@ -1,0 +1,105 @@
+2.
+
+a) Imprima dois números inteiros e troque-os.
+
+fun troca() {
+    val a1 = "4"
+    val a2 = "7"
+    println(a1 + " " + a2)
+    println(a2 + " " + a1)
+}
+
+b) Verifique se um número é par ou ímpar.
+
+fun numParImp() {
+    val num = 5
+    if (num % 2 == 0) {
+        println ("par")
+    }
+    else {
+        println ("ímpar")
+    }
+}
+
+c) Encontre a frequência de um caractere numa String.
+
+fun freqChar() {
+    val nome = "gonçalo"
+    val letra = 'o'
+    var freq = 0
+    for (c in nome) {
+        if (c == letra) {
+           freq++ 
+        }
+    }
+    println ("$freq")
+}
+
+d) Imprima o fatorial de 10 ( 10! ).
+
+fun fat10() {
+    var fatorial = 1
+    for(i in 1..10) {
+        fatorial*= i
+    }
+    println("$fatorial")
+}
+
+e) Converter uma data escrita como string em data.
+
+
+import java.time.LocalDate
+fun main() {
+    val data: String = "1997-08-15"
+    val date = LocalDate.parse(data)
+    println(date)    
+}
+
+f) Imprima todos os membros de um array no ecrã, separados por
+vírgulas.
+
+fun main() {
+    val array = arrayOf(1, 2, 3, 4, 5)
+    println(array.joinToString(", "))
+}
+
+g) Calcular o desvio padrão dos dados apresentados num array.
+
+import kotlin.math.pow
+import kotlin.math.sqrt
+
+fun main() {
+    val dados = doubleArrayOf(10.0, 12.0, 23.0, 23.0, 16.0, 23.0, 21.0, 16.0)
+    val media = dados.average()
+    val somaQuadrados = dados.sumOf { (it - media).pow(2.0) }    
+    val desvioPadrao = sqrt(somaQuadrados / dados.size)
+
+    println("Desvio Padrão: $desvioPadrao")
+}
+
+h) Programa para adicionar duas matrizes.
+
+fun main() {
+    val matrizA = arrayOf(
+        intArrayOf(1, 2, 3),
+        intArrayOf(4, 5, 6)
+    )
+    val matrizB = arrayOf(
+        intArrayOf(9, 8, 7),
+        intArrayOf(6, 5, 4)
+    )
+    val soma = Array(matrizA.size) { i ->
+        IntArray(matrizA[0].size) { j ->
+            matrizA[i][j] + matrizB[i][j]
+        }
+    }
+    for (linha in soma) {
+        println(linha.joinToString("\t"))
+    }
+}
+
+i) Multiplique duas matrizes passando-as para uma função.
+
+
+
+	
